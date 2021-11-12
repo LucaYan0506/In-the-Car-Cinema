@@ -1,0 +1,124 @@
+.nav-bar{
+    background-color: #4c54a7;
+    position:fixed;
+    left:0;
+    top:0;
+    min-width: 1123px;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav-bar #nav-link{
+    color:rgb(176, 171, 214);
+    font-size:20px;
+    text-decoration: none;    
+    padding-right: 30px;
+}
+.nav-bar #nav-link:hover{
+    color:#fff;
+    text-decoration:underline;
+}
+
+.container{
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-size:100% 100%;
+
+    min-width: 1123px;
+
+    width: 100%;
+    position:absolute;
+    left:0px;
+    z-index: 0;
+
+}
+
+#welcome{
+    background-image:url("Image/Background/Home_background.jpg");
+    background-color:black;
+    height: 100vh;
+    top:0px;
+
+    display: flex;
+    align-items: center;
+}
+
+#location{
+    background-image:  url("Image/Background/Location_background.jpg");
+    background-color:#0a2536;
+    height: 764px;
+    top:calc(100vh);
+
+}
+
+#film{
+    background-image:url("Image/Background/Film_background.jpg");
+    height: 900px;
+    top:calc(100vh + 764px);
+    
+}
+
+#food{
+    background-image: url("Image/Background/Food_background\(color\).jpg");
+    height:800px;
+    top:calc(100vh + 1664px);
+}
+
+#feedback{
+    background-color: #0e3965;
+    color:white;
+    height: 500px;
+    top: calc(100vh + 2464px);
+
+}
+
+#feedback #form{
+    width:600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#feedback h3{
+    margin:0 0 0 0;
+}
+
+#feedback #comment{
+    width:580px;
+    height:200px;
+    border-radius: 10px;
+}
+
+#feedback #submit-btn{
+    width:588px;
+    height:30px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer{
+    position: absolute;
+    top: calc(100vh + 2964px);
+    left:0px;
+    width:100%;
+    min-width: 1123px;
+
+    background-color:#1d1d1d;
+    color:white;
+
+    display: grid;
+    grid-template-columns:200px calc(calc(100% - 200px) / 3) calc(calc(100% - 200px) / 3) calc(calc(100% - 200px) / 3);
+}
+
+
+
+footer #item4{
+    grid-row:2/4;
+}
+
+footer #item5{
+    grid-row:2/4;
+}
