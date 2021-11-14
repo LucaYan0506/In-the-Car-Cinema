@@ -11,13 +11,13 @@
     z-index: 1;
 }
 
-.nav-bar #nav-link{
+.nav-bar .nav-link{
     color:rgb(176, 171, 214);
     font-size:20px;
     text-decoration: none;    
     padding-right: 30px;
 }
-.nav-bar #nav-link:hover{
+.nav-bar .nav-link:hover{
     color:#fff;
     text-decoration:underline;
 }
