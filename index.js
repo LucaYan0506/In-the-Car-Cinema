@@ -15,6 +15,7 @@ function check(){
             document.getElementById(ls[i] + "-link").style.color = ""
         }
     }
+    
 
 
 
