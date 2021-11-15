@@ -1,4 +1,5 @@
-
+var prev_link = document.getElementById("welcome-link");
+prev_link.style.color = "white";
 
 
 function check(){
@@ -6,13 +7,12 @@ function check(){
 
     for (var i = 0; i < ls.length;i++){
         var location = document.getElementById(ls[i]);
-
-        if (location.getBoundingClientRect().top <= 10 & location.getBoundingClientRect().top >= 0){
-            console.log(location.getBoundingClientRect().top + ls[i]);
-            document.getElementById(ls[i] + "-link").style.color = "white";
-        }
-        else{
-            document.getElementById(ls[i] + "-link").style.color = ""
+        var vh = window.innerHeight + 1;
+        if (location.getBoundingClientRect().bottom <= vh & location.getBoundingClientRect().bottom >= 50){
+            console.log(location.getBoundingClientRect().bottom + ls[i]);
+            prev_link.style.color = "";
+            prev_link = document.getElementById(ls[i] + "-link");
+            prev_link.style.color = "white";
         }
     }
     

@@ -71,7 +71,7 @@
 #feedback{
     background-color: #0e3965;
     color:white;
-    height: 500px;
+    height: 800px;
     top: calc(100vh + 2464px);
 
 }
@@ -99,9 +99,9 @@
     font-weight: bold;
 }
 
-footer{
+#footer{
     position: absolute;
-    top: calc(100vh + 2964px);
+    top: calc(100vh + 2964px + 300px);
     left:0px;
     width:100%;
     min-width: 1123px;
@@ -115,10 +115,10 @@ footer{
 
 
 
-footer #item4{
+#footer #item4{
     grid-row:2/4;
 }
 
-footer #item5{
+#footer #item5{
     grid-row:2/4;
 }
