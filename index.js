@@ -8,7 +8,7 @@ function check(){
         var location = document.getElementById(ls[i]);
 
         if (location.getBoundingClientRect().top == 0){
-            console.log(location.getBoundingClientRect().top);
+            console.log(location.getBoundingClientRect().top + ls[i]);
             document.getElementById(ls[i] + "-link").style.color = "white";
         }
         else{
