@@ -2,12 +2,19 @@
 
 
 function check(){
-    var home_top = document.getElementById("welcome");
-    if (home_top.getBoundingClientRect().top == 0){
-        console.log(home_top.getBoundingClientRect().top);
-        document.getElementById("home").style.color = "white";
+    var ls = ["welcome","location","film","food","feedback","footer"];
+
+    for (var i = 0; i < ls.length;i++){
+        var location = document.getElementById(ls[i]);
+
+        if (location.getBoundingClientRect().top == 0){
+            console.log(location.getBoundingClientRect().top);
+            document.getElementById(ls[i] + "-link").style.color = "white";
+        }
+        else{
+            document.getElementById(ls[i] + "-link").style.color = ""
+        }
     }
-    else{
-        document.getElementById("home").style.color = ""
-    }
+
+
 }
