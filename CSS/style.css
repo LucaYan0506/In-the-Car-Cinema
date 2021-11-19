@@ -3,7 +3,7 @@
     position:fixed;
     left:0;
     top:0;
-    min-width: 1123px;
+    min-width: 1180px;
     width: 100vw;
     height: 50px;
     display: flex;
@@ -15,11 +15,26 @@
     color:rgb(176, 171, 214);
     font-size:20px;
     text-decoration: none;    
-    padding-right: 30px;
+    padding-right:20px;
+    padding-left: 15px;
 }
 .nav-bar .nav-link:hover{
-    color:#fff;
+    color:white;
+    background-color: rgb(117, 110, 172);;
     text-decoration:underline;
+}
+
+.sub-menu1{
+    display: none;
+}
+.nav-bar .open-menu:hover .sub-menu1{
+   display: block;
+   position: absolute;
+   padding-left: -15px;
+   padding-top:10px;
+   padding-right: -15px;
+   background-color: #4c54a7;
+   z-index: 1;
 }
 
 .container{
@@ -28,7 +43,7 @@
     background-size:cover;
     background-size:100% 100%;
 
-    min-width: 1123px;
+    min-width: 1180px;
 
     width: 100%;
     position:absolute;
@@ -38,41 +53,36 @@
 }
 
 #welcome{
-    background-image:url("Image/Background/Home_background.jpg");
+    background-image:url("/Image & assets/Background/Home_background.jpg");
     background-color:black;
     height: 100vh;
-    top:0px;
 
     display: flex;
     align-items: center;
 }
 
 #location{
-    background-image:  url("Image/Background/Location_background.jpg");
+    background-image:  url("/Image & assets/Background/Location_background.jpg");
     background-color:#0a2536;
     height: 764px;
-    top:calc(100vh);
 
 }
 
 #film{
-    background-image:url("Image/Background/Film_background.jpg");
+    background-image:url("/Image & assets/Background/Film_background.jpg");
     height: 900px;
-    top:calc(100vh + 764px);
     
 }
 
 #food{
-    background-image: url("Image/Background/Food_background\(color\).jpg");
+    background-image: url("/Image & assets/Background/Food_background\(color\).jpg");
     height:800px;
-    top:calc(100vh + 1664px);
 }
 
 #feedback{
     background-color: #0e3965;
     color:white;
     height: 800px;
-    top: calc(100vh + 2464px);
 
 }
 
@@ -100,12 +110,6 @@
 }
 
 #footer{
-    position: absolute;
-    top: calc(100vh + 2964px + 300px);
-    left:0px;
-    width:100%;
-    min-width: 1123px;
-
     background-color:#1d1d1d;
     color:white;
 
@@ -119,6 +123,3 @@
     grid-row:2/4;
 }
 
-#footer #item5{
-    grid-row:2/4;
-}

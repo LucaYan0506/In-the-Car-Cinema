@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet"/>
+    <link href="CSS/style.css" rel="stylesheet"/>
     <title>In the Car Cinema</title>
 </head>
 <body onscroll="check()">
+    <input type="hidden" id="prev-link" name="welcome-link">
 
     <nav class="nav-bar">
-        <img src="Image/logo.png" alt="Logo" width="100px">
+        <img src="Image & assets/logo.png" alt="Logo" width="100px">
         <h1 style="margin-left:10px;margin-right: auto;color:rgb(255,0, 80);font-size:32px;" >In the Car Cinema</h1>
         <a id="welcome-link" class="nav-link" href="#welcome" >Home</a>
-        <a id="location-link" class="nav-link" href="#location">Location</a>
+         <div class="open-menu"><a id="location-link" class="nav-link" href="index.html#location">Location</a>
+            <div class="sub-menu1">
+                <a id="location1-link" class="nav-link" style="padding-left: 7px;margin-left: 7px;padding-right: 7px;margin-right: 24px;" href="#">Location 1</a><br><hr>
+                <a id="location2-link" class="nav-link" style="padding-left: 7px;margin-left: 7px;padding-right: 7px;margin-right: 24px;" href="#">Location 2</a><br><hr>
+                <a id="location3-link" class="nav-link" style="padding-left: 7px;margin-left: 7px;padding-right: 7px;margin-right: 24px;" href="#">Location 3</a><br>
+            </div>
+        </div>
         <a id="film-link" class="nav-link" href="#film">Film</a>
         <a id="food-link" class="nav-link" href="#food">Food</a>
         <a id="feedback-link" class="nav-link" href="#feedback">Feedback</a>
         <a id="footer-link" class="nav-link" href="#footer">Contact us</a>
-        <a class="nav-link" >Login</a> 
-        <a class="nav-link">Additional Info</a>     
+        <a id="login-link" class="nav-link" href="Login.html">Login</a> 
+        <a id="add-info-link" class="nav-link" href="Additional_Info.html">Additional Info</a>     
     </nav>
 
     <div class="container" id="welcome">
@@ -29,7 +36,7 @@
         </div>
     </div>
 
-    <div class="container" id="location">
+    <div class="container" id="location" style="top:var(a)">
     
     </div>
 
@@ -64,14 +71,14 @@
 
     </div>
 
-    <div id="footer">
+    <div class="container" id="footer">
         <div id="margin-left"></div>
     
         <div style="width: auto;"  id="item1">
-            <h1>Our Office</h1>
+            <h1>Contact us</h1>
         </div>
         <div id="item2">
-            <h1>Contact us</h1>
+            <h1>Join our mailing list</h1>
         </div>
         <div id="item3">
             <h1>Subscribe us</h1>
@@ -80,10 +87,6 @@
         <div id="margin-left" style="grid-row:2/4"></div>
     
         <div id="item4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.9415566056045!2d-2.2189681843193907!3d53.46950457318037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb19c9c942be3%3A0x6411d32e7762c175!2sThe%20Manchester%20College!5e0!3m2!1sen!2suk!4v1636733743489!5m2!1sen!2suk" width="450" height="225" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    
-        <div id="item5">
             <img scr="#" alt="icon" /> 
             <label style="font-weight:bold;font-size:20px;" for="email">help@inthecar.com</label> 
     
@@ -92,6 +95,17 @@
     
             <img scr="#" alt="phone" /> 
             <label style="font-weight:bold;font-size:20px;" for="phone">+44 124 4312 3551</label> 
+        </div>
+    
+        <div id="item5">
+            <div>
+                <form action="#footer" onsubmit="return message(this,'Success! You are now subscribed')">
+                    <input style="width:192px" type="email">
+                    <br>
+                    <br>
+                    <input style="width:200px;height:30px;font-weight: bold;" type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     
         <div>
@@ -103,15 +117,7 @@
             <img scr="#" alt="Linkedin">
             <img scr="#" alt="Twitter">
         </div>
-        <div>
-            <form action="">
-                <input style="width:192px" type="email">
-                <br>
-                <br>
-                <input style="width:200px;height:30px;font-weight: bold;" type="submit" value="Submit">
-            </form>
-        </div>
-    
+     
         <div style="color:#1d1d1d;">bot-border</div>
         <div style="color:#1d1d1d;"></div>
         <div style="color:#1d1d1d;"></div>
@@ -120,7 +126,7 @@
 </body>
 
 
-<script src="index.js"></script>
+<script src="js/index.js"></script>
 
 </html>
 

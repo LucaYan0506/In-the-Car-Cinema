@@ -1,22 +1,47 @@
-var prev_link = document.getElementById("welcome-link");
+//get all elements that have class="container"
+var elements = document.getElementsByClassName("container");
+//add the id of these elements in the ls
+var ls = [];
+for (var i = 0; i < elements.length; i++){
+    ls.push(elements[i].id);
+}
+
+//update the position of ls
+function update(){
+    //set the height of all section of index page
+    var h = 0;
+    for (var i = 1; i < ls.length; i++){
+        h += document.getElementById(ls[i - 1]).offsetHeight;
+        document.getElementById(ls[i]).style.top = h + 'px';
+    }
+}
+
+//every time the browser is resized update the position 
+window.addEventListener("resize", update);
+
+//use update() function when the user launch the browser
+update();
+
+//change the color of nav-link when the page is scrolled
+var prev_link = document.getElementById(document.getElementById("prev-link").name);
 prev_link.style.color = "white";
 
-
 function check(){
-    var ls = ["welcome","location","film","food","feedback","footer"];
-
+    
     for (var i = 0; i < ls.length;i++){
         var location = document.getElementById(ls[i]);
         var vh = window.innerHeight + 1;
         if (location.getBoundingClientRect().bottom <= vh & location.getBoundingClientRect().bottom >= 50){
-            console.log(location.getBoundingClientRect().bottom + ls[i]);
             prev_link.style.color = "";
             prev_link = document.getElementById(ls[i] + "-link");
             prev_link.style.color = "white";
         }
     }
-    
+}
 
 
-
+//show an pop up message
+function message(form,m){
+    alert(m);
+    form.reset();
 }
