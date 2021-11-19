@@ -53,7 +53,7 @@
 }
 
 #welcome{
-    background-image:url("/Image & assets/Background/Home_background.jpg");
+    background-image:url("../Image&assets/Background/Home_background.jpg");
     background-color:black;
     height: 100vh;
 
@@ -62,20 +62,20 @@
 }
 
 #location{
-    background-image:  url("/Image & assets/Background/Location_background.jpg");
+    background-image:  url("../Image&assets/Background/Location_background.jpg");
     background-color:#0a2536;
     height: 764px;
 
 }
 
 #film{
-    background-image:url("/Image & assets/Background/Film_background.jpg");
+    background-image:url("../Image&assets/Background/Film_background.jpg");
     height: 900px;
     
 }
 
 #food{
-    background-image: url("/Image & assets/Background/Food_background\(color\).jpg");
+    background-image: url("../Image&assets/Background/Food_background\(color\).jpg");
     height:800px;
 }
 
