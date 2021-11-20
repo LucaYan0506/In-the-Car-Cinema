@@ -65,13 +65,30 @@
     background-image:  url("../Image&assets/Background/Location_background.jpg");
     background-color:#0a2536;
     height: 764px;
+    display:grid;
+    grid-template-columns: 15% 18% 18% 18% auto;
+    grid-template-rows: 15% 55% 30%;
+    grid-column-gap:5%;
+}
 
+.loc{
+    color:rgb(45, 45, 48);
+    text-align: center;
+    border-style: solid;
+    border-color: red;
 }
 
 #film{
     background-image:url("../Image&assets/Background/Film_background.jpg");
     height: 900px;
     
+}
+
+#film-container{
+    color:#e3e2ee;
+
+    margin:30px 30px 30px 30px;
+    height: 560px;
 }
 
 #food{
