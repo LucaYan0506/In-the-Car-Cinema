@@ -27,7 +27,6 @@ var prev_link = document.getElementById(document.getElementById("prev-link").nam
 prev_link.style.color = "white";
 
 function check(){
-    
     for (var i = 0; i < ls.length;i++){
         var location = document.getElementById(ls[i]);
         var vh = window.innerHeight + 1;
@@ -44,4 +43,35 @@ function check(){
 function message(form,m){
     alert(m);
     form.reset();
+}
+
+//set scrollbar value
+function go_to(value){
+    var h = 0;
+    for (var i = 1; i < ls.length & ls[i - 1] != value; i++)
+        h += document.getElementById(ls[i - 1]).offsetHeight;
+        if (value == "film")h+= 60;
+    window.scrollTo({
+        top: h - 80,
+        left: 0,
+        behavior: 'smooth'
+      });
+
+      console.log(h);
+}
+
+function loads_animation(){
+    document.querySelector('.animation').classList.add('active');
+    setTimeout(() =>{
+        window.location.replace("Login.html")
+    },500)
+}
+
+window.onload = () =>{
+    const animation = document.querySelector('.animation');
+    setTimeout(() =>{
+        animation.classList.remove('active');
+    },500)
+
+
 }

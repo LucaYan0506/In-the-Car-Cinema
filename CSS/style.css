@@ -17,6 +17,7 @@
     text-decoration: none;    
     padding-right:20px;
     padding-left: 15px;
+    user-select: none;
 }
 .nav-bar .nav-link:hover{
     color:white;
@@ -140,3 +141,19 @@
     grid-row:2/4;
 }
 
+.animation{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index: 3;
+    transition: 0.5s ease-out;
+    pointer-events: none;
+}
+.animation.active{
+    opacity: 1;
+    pointer-events: all;
+}
