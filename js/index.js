@@ -75,3 +75,9 @@ window.onload = () =>{
 
 
 }
+
+
+function try1(value){
+    document.getElementById(value).src = "Image&assets/Feedback/c_emoji1.jpg";
+    console.log("feS");
+}

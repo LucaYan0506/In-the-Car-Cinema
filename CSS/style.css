@@ -73,6 +73,7 @@
 }
 
 .loc{
+    position: relative;
     color:rgb(45, 45, 48);
     text-align: center;
     border-style: solid;
@@ -81,20 +82,38 @@
 
 #film{
     background-image:url("../Image&assets/Background/Film_background.jpg");
-    height: 900px;
-    
+    height: 40vw;
+    min-height: 480px;
 }
 
 #film-container{
     color:#e3e2ee;
-
     margin:30px 30px 30px 30px;
-    height: 560px;
+    height: 40vw;
+    min-height: 480px;
 }
-
+#film-container div a button{
+    color:rgb(23, 23, 24);
+    text-decoration: none;  
+    user-select: none;
+    font-size:24px;
+}
 #food{
     background-image: url("../Image&assets/Background/Food_background\(color\).jpg");
     height:800px;
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: 45% 45% 10%;
+}
+
+#food div{
+    margin-top:25px;
+    color:whitesmoke;
+    text-align: center;
+}
+
+#food #item5{
+    grid-column:2/4;
 }
 
 #feedback{
@@ -112,6 +131,11 @@
 
 #feedback h3{
     margin:0 0 0 0;
+}
+
+#form img{
+    width: 60px;
+    margin:10px 10px 10px 10px;
 }
 
 #feedback #comment{
@@ -135,11 +159,20 @@
     grid-template-columns:200px calc(calc(100% - 200px) / 3) calc(calc(100% - 200px) / 3) calc(calc(100% - 200px) / 3);
 }
 
-
-
 #footer #item4{
     grid-row:2/4;
 }
+
+button {
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    border-radius: 0.25rem;
+}
+
+
+
+
+
 
 .animation{
     width: 100vw;
@@ -157,3 +190,4 @@
     opacity: 1;
     pointer-events: all;
 }
+
