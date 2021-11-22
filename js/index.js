@@ -60,10 +60,10 @@ function go_to(value){
       console.log(h);
 }
 
-function loads_animation(){
+function loads_animation(url){
     document.querySelector('.animation').classList.add('active');
     setTimeout(() =>{
-        window.location.replace("Login.html")
+        window.location.replace(url)
     },500)
 }
 
