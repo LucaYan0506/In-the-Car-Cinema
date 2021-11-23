@@ -111,6 +111,7 @@ function select(value){
 }
 
 
+var stars = ["",false,false,false,false,false];
 function fill(value){
     var i = value[4];
     for (var j = 1; j <= i;j++){
@@ -120,7 +121,8 @@ function fill(value){
 
 function empty(value){
     var i = value[4];
-    for (var j = i; j <= 5;j++){
+    for (var j = 5; j > 0;j--){
+        if (stars[i] == true)break;
         document.getElementById("star" + j).src = "Image&assets/Feedback/u_star.png";
     }
 }
