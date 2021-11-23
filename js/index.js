@@ -126,3 +126,8 @@ function empty(value){
         document.getElementById("star" + j).src = "Image&assets/Feedback/u_star.png";
     }
 }
+
+function rate(value){
+    i = value[4];
+    stars[i] = true;
+}
