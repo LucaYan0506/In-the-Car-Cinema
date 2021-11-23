@@ -99,12 +99,13 @@ function select(value){
     var i = value[5];
     emojis[i] = true;
     for (var j = 1; j <= 5; j++){
-        if (emojis[j] & j != i){
-            document.getElementById("image" + j).src = "Image&assets/Feedback/" + u_imgs[i];
+        if (emojis[j] == true & j != i){
+            emojis[j] = false;
+            document.getElementById("image" + j).src = "Image&assets/Feedback/" + u_imgs[j];
         }
         if (j == i){
             emojis[i] = true;
-            document.getElementById(value).src = "Image&assets/Feedback/" + c_imgs[i];
+            document.getElementById(value).src = "Image&assets/Feedback/" + c_imgs[j];
         }
     }
 }
