@@ -122,12 +122,14 @@ function fill(value){
 function empty(value){
     var i = value[4];
     for (var j = 5; j > 0;j--){
-        if (stars[i] == true)break;
+        if (stars[j] == true)break;
         document.getElementById("star" + j).src = "Image&assets/Feedback/u_star.png";
     }
 }
 
 function rate(value){
     i = value[4];
+    for (var j = 1; j <= 5; j++)
+        stars[j] = false;
     stars[i] = true;
 }
