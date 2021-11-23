@@ -109,3 +109,18 @@ function select(value){
         }
     }
 }
+
+
+function fill(value){
+    var i = value[4];
+    for (var j = 1; j <= i;j++){
+        document.getElementById(value).src = "Image&assets/Feedback/c_star.png";
+    }
+}
+
+function empty(value){
+    var i = value[4];
+    for (var j = i; j <= 5;j++){
+        document.getElementById(value).src = "Image&assets/Feedback/u_star.png";
+    }
+}
