@@ -145,11 +145,15 @@ function submit_check(form,m){
         if (stars[i] == true)star_check = true;
     }
 
-    if (star_check == false)
-        return false;
+    if (star_check == false){
+        alert("Pls rate our website");
+        return;
+    }
 
-    if (emote_check == false)
-        return false;
+    if (emote_check == false){
+        alert("Pls say if you will come back");
+        return;
+    }
 
     alert(m);
 }
