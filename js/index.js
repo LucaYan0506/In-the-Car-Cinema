@@ -78,21 +78,21 @@ window.onload = () =>{
 
 
 var emojis = ["",false,false,false,false,false];
-var c_imgs = ["","c_emoji1.png","c_emoji2.png","c_emoji3.png","c_emoji4.png","c_emoji5.png"]
-var u_imgs = ["","u_emoji1.png","u_emoji2.png","u_emoji3.png","u_emoji4.png","u_emoji5.png"];
+var c_emotes = ["","c_emoji1.png","c_emoji2.png","c_emoji3.png","c_emoji4.png","c_emoji5.png"]
+var u_emotes = ["","u_emoji1.png","u_emoji2.png","u_emoji3.png","u_emoji4.png","u_emoji5.png"];
 
 function change_color(value){
     var i = value[5];
     if (emojis[i])return;
 
-    document.getElementById(value).src = "Image&assets/Feedback/" + c_imgs[i];
+    document.getElementById(value).src = "Image&assets/Feedback/" + c_emotes[i];
 }
 
 function change_color_back(value){
     var i = value[5];
     if (emojis[i])return;
 
-    document.getElementById(value).src = "Image&assets/Feedback/" + u_imgs[i];
+    document.getElementById(value).src = "Image&assets/Feedback/" + u_emotes[i];
 }
 
 function select(value){
@@ -101,11 +101,11 @@ function select(value){
     for (var j = 1; j <= 5; j++){
         if (emojis[j] == true & j != i){
             emojis[j] = false;
-            document.getElementById("image" + j).src = "Image&assets/Feedback/" + u_imgs[j];
+            document.getElementById("image" + j).src = "Image&assets/Feedback/" + u_emotes[j];
         }
         if (j == i){
             emojis[i] = true;
-            document.getElementById(value).src = "Image&assets/Feedback/" + c_imgs[j];
+            document.getElementById(value).src = "Image&assets/Feedback/" + c_emotes[j];
         }
     }
 }
@@ -132,4 +132,24 @@ function rate(value){
     for (var j = 1; j <= 5; j++)
         stars[j] = false;
     stars[i] = true;
+}
+
+
+//check if the user can submit 
+function submit_check(form,m){
+    var star_check = false;
+    var emote_check = false;
+
+    for (var i = 1; i <= 5; i++){
+        if (emojis[i] == true)emote_check = true;
+        if (stars[i] == true)star_check = true;
+    }
+
+    if (star_check == false)
+        return false;
+
+    if (emote_check == false)
+        return false;
+
+    alert(m);
 }
