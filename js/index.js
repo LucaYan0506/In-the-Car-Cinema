@@ -83,3 +83,9 @@ function change_color(value){
     document.getElementById(value).src = "Image&assets/Feedback/" + imgs[i];
     console.log("feS");
 }
+
+function change_color_back(value){
+    var i = value[5];
+    var imgs = ["","u_emoji1.png","u_emoji2.png","u_emoji3.png","u_emoji4.png","u_emoji5.png"];
+    document.getElementById(value).src = "Image&assets/Feedback/" + imgs[i];
+}
