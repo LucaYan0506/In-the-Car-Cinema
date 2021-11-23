@@ -77,7 +77,9 @@ window.onload = () =>{
 }
 
 
-function try1(value){
-    document.getElementById(value).src = "Image&assets/Feedback/c_emoji1.jpg";
+function change_color(value){
+    var i = value[5];
+    var imgs = ["c_emoji1.png","c_emoji2.png","c_emoji3.png","c_emoji4.png","c_emoji5.png"]
+    document.getElementById(value).src = "Image&assets/Feedback/" + img[i];
     console.log("feS");
 }
