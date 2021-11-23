@@ -77,15 +77,34 @@ window.onload = () =>{
 }
 
 
+var emojis = ["",false,false,false,false,false];
+var c_imgs = ["","c_emoji1.png","c_emoji2.png","c_emoji3.png","c_emoji4.png","c_emoji5.png"]
+var u_imgs = ["","u_emoji1.png","u_emoji2.png","u_emoji3.png","u_emoji4.png","u_emoji5.png"];
+
 function change_color(value){
     var i = value[5];
-    var imgs = ["","c_emoji1.png","c_emoji2.png","c_emoji3.png","c_emoji4.png","c_emoji5.png"]
-    document.getElementById(value).src = "Image&assets/Feedback/" + imgs[i];
-    console.log("feS");
+    if (emojis[i])return;
+
+    document.getElementById(value).src = "Image&assets/Feedback/" + c_imgs[i];
 }
 
 function change_color_back(value){
     var i = value[5];
-    var imgs = ["","u_emoji1.png","u_emoji2.png","u_emoji3.png","u_emoji4.png","u_emoji5.png"];
-    document.getElementById(value).src = "Image&assets/Feedback/" + imgs[i];
+    if (emojis[i])return;
+
+    document.getElementById(value).src = "Image&assets/Feedback/" + u_imgs[i];
+}
+
+function select(value){
+    var i = value[5];
+    emojis[i] = true;
+    for (var j = 1; j <= 5; j++){
+        if (emojis[j] & j != i){
+            document.getElementById("image" + j).src = "Image&assets/Feedback/" + u_imgs[i];
+        }
+        if (j == i){
+            emojis[i] = true;
+            document.getElementById(value).src = "Image&assets/Feedback/" + c_imgs[i];
+        }
+    }
 }
