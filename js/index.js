@@ -156,4 +156,5 @@ function submit_check(form,m){
     }
 
     alert(m);
+    form.reset();
 }
