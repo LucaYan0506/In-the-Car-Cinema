@@ -158,3 +158,10 @@ function submit_check(form,m){
     alert(m);
     form.reset();
 }
+
+
+
+function change_thumbs(value,value2){
+    document.getElementById(value).src = "Image&assets/Feedback/c_" + value + ".png";
+    document.getElementById(value2).src = "Image&assets/Feedback/c_" + value + ".png";
+}
