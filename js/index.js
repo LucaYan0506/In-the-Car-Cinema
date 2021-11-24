@@ -163,5 +163,5 @@ function submit_check(form,m){
 
 function change_thumbs(value,value2){
     document.getElementById(value).src = "Image&assets/Feedback/c_" + value + ".png";
-    document.getElementById(value2).src = "Image&assets/Feedback/c_" + value + ".png";
+    document.getElementById(value2).src = "Image&assets/Feedback/u_" + value2 + ".png";
 }
