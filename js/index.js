@@ -155,8 +155,20 @@ function submit_check(form,m){
         return;
     }
 
+    if (document.getElementById("thumbs_down").src == "Image&assets/Feedback/u_thumbs_down.png" & document.getElementById("thumbs_up").src == "Image&assets/Feedback/u_thumbs_up.png"){
+        alert("Pls say if you will recommend us to your friend");
+        return;
+    }
     alert(m);
     form.reset();
+
+    for (var i = 1; i <= 5; i++){
+        emojis[i] = false;
+        stars[i] = false;
+        document.getElementById("image" + i).src = "Image&assets/Feedback/" + u_emotes[i];
+        document.getElementById("star" + i).src = "Image&assets/Feedback/u_star.png";
+    }
+
 }
 
 
