@@ -39,8 +39,12 @@ function check(){
 }
 
 
-//show an pop up message
-function message(form,m){
+//check submission of the email in the footer is not empty
+function check_email_footer(form,m){
+    if (form.elements[0].value == ""){
+         alert("Pls enter an email"); 
+        return;
+    }
     alert(m);
     form.reset();
 }
@@ -50,7 +54,6 @@ function go_to(value){
     var h = 0;
     for (var i = 1; i < ls.length & ls[i - 1] != value; i++)
         h += document.getElementById(ls[i - 1]).offsetHeight;
-        if (value == "film")h+= 60;
     window.scrollTo({
         top: h - 80,
         left: 0,
@@ -60,27 +63,30 @@ function go_to(value){
       console.log(h);
 }
 
+
+//loads animation
 function loads_animation(url){
     document.querySelector('.animation').classList.add('active');
     setTimeout(() =>{
         window.location.replace(url)
-    },500)
+    },200)
 }
 
 window.onload = () =>{
     const animation = document.querySelector('.animation');
     setTimeout(() =>{
         animation.classList.remove('active');
-    },500)
+    },200)
 
 
 }
 
-
+//feature for emotes, stars and thumbs on the feedback section
 var emojis = ["",false,false,false,false,false];
 var c_emotes = ["","c_emoji1.png","c_emoji2.png","c_emoji3.png","c_emoji4.png","c_emoji5.png"]
 var u_emotes = ["","u_emoji1.png","u_emoji2.png","u_emoji3.png","u_emoji4.png","u_emoji5.png"];
 
+//emotes
 function change_color(value){
     var i = value[5];
     if (emojis[i])return;
@@ -110,17 +116,23 @@ function select(value){
     }
 }
 
-
+//stars
 var stars = ["",false,false,false,false,false];
 function fill(value){
     var i = value[4];
-    for (var j = 1; j <= i;j++){
-        document.getElementById("star" + j).src = "Image&assets/Feedback/c_star.png";
+    for (var j = 1; j <= 5;j++){
+        if (j <= i)
+            document.getElementById("star" + j).src = "Image&assets/Feedback/c_star.png";
+        else
+            document.getElementById("star" + j).src = "Image&assets/Feedback/u_star.png";
     }
 }
 
 function empty(value){
     var i = value[4];
+    for (var j = 1; j <= 5;j++)
+        document.getElementById("star" + j).src = "Image&assets/Feedback/c_star.png";
+    
     for (var j = 5; j > 0;j--){
         if (stars[j] == true)break;
         document.getElementById("star" + j).src = "Image&assets/Feedback/u_star.png";
@@ -134,6 +146,14 @@ function rate(value){
     stars[i] = true;
 }
 
+var thumbs = false;
+
+//thumbs
+function change_thumbs(value,value2){
+    thumbs = true;
+    document.getElementById(value).src = "Image&assets/Feedback/c_" + value + ".png";
+    document.getElementById(value2).src = "Image&assets/Feedback/u_" + value2 + ".png";
+}
 
 //check if the user can submit 
 function submit_check(form,m){
@@ -141,39 +161,27 @@ function submit_check(form,m){
     var emote_check = false;
 
     for (var i = 1; i <= 5; i++){
-        if (emojis[i] == true)emote_check = true;
-        if (stars[i] == true)star_check = true;
+        if (emojis[i])emote_check = true;
+        if (stars[i])star_check = true;
     }
 
-    if (emote_check == false){
-        alert("Pls say if you will come back");
-        return;
-    }
+    if (!emote_check || !star_check)
+        return alert("Pls complete the form");
 
-    if (star_check == false){
-        alert("Pls rate our website");
-        return;
-    }
+    if (!thumbs)
+        return alert("Pls complete the form");
 
-    if (document.getElementById("thumbs_down").src == "Image&assets/Feedback/u_thumbs_down.png" & document.getElementById("thumbs_up").src == "Image&assets/Feedback/u_thumbs_up.png"){
-        alert("Pls say if you will recommend us to your friend");
-        return;
-    }
+    //clear the form 
     alert(m);
     form.reset();
-
     for (var i = 1; i <= 5; i++){
         emojis[i] = false;
         stars[i] = false;
         document.getElementById("image" + i).src = "Image&assets/Feedback/" + u_emotes[i];
         document.getElementById("star" + i).src = "Image&assets/Feedback/u_star.png";
     }
+    thumbs = false;
+    document.getElementById("thumbs_down").src = "Image&assets/Feedback/u_thumbs_down.png";
+    document.getElementById("thumbs_up").src = "Image&assets/Feedback/u_thumbs_up.png";
 
-}
-
-
-
-function change_thumbs(value,value2){
-    document.getElementById(value).src = "Image&assets/Feedback/c_" + value + ".png";
-    document.getElementById(value2).src = "Image&assets/Feedback/u_" + value2 + ".png";
 }

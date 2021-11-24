@@ -135,7 +135,8 @@
 
 #form img{
     width: 60px;
-    margin:10px 10px 10px 10px;
+    padding:10px 10px 10px 10px;
+    margin-left: -5px;
 }
 
 #feedback #comment{
@@ -170,7 +171,11 @@ button {
 }
 
 
-
+#photo-profile{
+    height: 150px;
+    align-items: center;
+    background-color: firebrick;
+}
 
 
 
@@ -183,7 +188,7 @@ button {
     top:0px;
     left:0px;
     z-index: 3;
-    transition: 0.5s ease-out;
+    transition: 0.2s ease-out;
     pointer-events: none;
 }
 .animation.active{
