@@ -30,7 +30,28 @@
         <a id="add-info-link" class="nav-link" onclick="loads_animation('Additional_Info.html')">Additional Info</a>     
     </nav>
 
-    <img src="Image&assets/Register/photo_profile.png"  alt="" id="photo-profile">
+    <div class="container" id="login-page">
+
+        <div id="photo-profile">
+            <img src="https://media.istockphoto.com/vectors/default-profile-picture-avatar-photo-placeholder-vector-illustration-vector-id1223671392?k=20&m=1223671392&s=612x612&w=0&h=lGpj2vWAI3WUT1JeJWm1PRoHT3V15_1pdcTn2szdwQ0=" alt="" height="150px">
+        </div>
+        <br>
+        <form action="#" style="text-align: center;" onsubmit="return message(this,'Login successful')">
+            <img src="data:image/png;base64,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" alt="username-icon" id="icon">
+            <input type="text" placeholder="username" style="height: 30px;width:400px" required/>
+            <br>
+            <br>
+            <img src="Image&assets/Register/password_icon.png" alt="password-icon" id="icon">
+            <input type="password" placeholder="password" style="height: 30px;width:400px;"; required/>
+            <br><br>
+            <input type="submit" value="Login" style="width: 440px;height: 30px;font-weight: bold;">
+            <br>
+            <br>
+            <a href="Register.html">Don't have an account? Click here to register</a>
+            <br><br>
+        </form>
+
+   </div>
 
     <div class="container" id="footer">
         <div id="margin-left"></div>
@@ -60,8 +81,8 @@
     
         <div id="item5">
             <div>
-                <form action="#footer" onsubmit="return check_email_footer(this,'Success! You are now subscribed')">
-                    <input style="width:192px" type="email">
+                <form action="#footer" onsubmit="return message(this,'Success! You are now subscribed')">
+                    <input style="width:192px" type="email" required>
                     <br>
                     <br>
                     <input style="width:200px;height:30px;font-weight: bold;" type="submit" value="Submit">

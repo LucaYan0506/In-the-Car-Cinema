@@ -4,7 +4,7 @@
     left:0;
     top:0;
     min-width: 1180px;
-    width: 100vw;
+    width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -170,14 +170,44 @@ button {
     border-radius: 0.25rem;
 }
 
+#login-page{
+    min-height: calc(100vh - 168px);
+    background-color:rgb(176, 171, 214);
+}
 
-#photo-profile{
+#login-page #photo-profile{
+    border-style: solid;
+    margin-top:100px; 
+    width: 150px;
     height: 150px;
-    align-items: center;
-    background-color: firebrick;
+    position: relative;
+    left:calc(50% - 75px);
+}
+
+#login-page #icon{
+    height:30px;
+    border-style: solid;
+    margin-bottom:-12px;
+    margin-right:-4px;
+}
+
+#add-info-page{
+    min-height: calc(100vh - 168px);
+    background-image: url("../Image&assets/Background/Add_info_background.jpg");
+    background-size:auto;
+    background-position:bottom;
+}
+
+#add-info-page #text{
+    margin-top: 100px;
+    position: relative;
+    left: calc(50% - 250px);
+    width: 500px;
 }
 
 
+
+/*
 
 .animation{
     width: 100vw;
@@ -196,3 +226,4 @@ button {
     pointer-events: all;
 }
 
+*/

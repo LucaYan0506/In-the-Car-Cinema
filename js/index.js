@@ -40,11 +40,7 @@ function check(){
 
 
 //check submission of the email in the footer is not empty
-function check_email_footer(form,m){
-    if (form.elements[0].value == ""){
-         alert("Pls enter an email"); 
-        return;
-    }
+function message(form,m){
     alert(m);
     form.reset();
 }
