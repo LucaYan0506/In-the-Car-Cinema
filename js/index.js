@@ -181,3 +181,18 @@ function submit_check(form,m){
     document.getElementById("thumbs_up").src = "Image&assets/Feedback/u_thumbs_up.png";
 
 }
+
+
+function check_password(){
+    var password = document.getElementById("password");
+    var re_password = document.getElementById("re-passoword");
+    var message = document.getElementById("message");
+
+    if (password.value != re_password.value)
+        message.innerHTML = "not matching"
+    else
+        message.innerHTML = "";
+
+    if (message.innerHTML == "not matching")
+        return false;
+}

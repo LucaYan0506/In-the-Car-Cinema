@@ -184,9 +184,11 @@ button {
     left:calc(50% - 75px);
 }
 
-#login-page #icon{
+#icon{
     height:30px;
     border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.486);
     margin-bottom:-12px;
     margin-right:-4px;
 }
@@ -196,15 +198,24 @@ button {
     background-image: url("../Image&assets/Background/Add_info_background.jpg");
     background-size:auto;
     background-position:bottom;
+    opacity: 0.8;
 }
 
 #add-info-page #text{
     margin-top: 100px;
     position: relative;
-    left: calc(50% - 250px);
-    width: 500px;
+    left: calc(50% - 350px);
+    width: 700px;
+    font-size:24px;
+    background-color: rgb(219, 237, 247,0.6);
 }
 
+#register-page{
+    min-height: calc(100vh - 168px);
+    background-color:rgb(176, 171, 214);
+    text-align: center;
+    padding-top:40px;
+}
 
 
 /*
