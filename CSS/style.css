@@ -211,13 +211,19 @@ button {
 }
 
 #register-page{
-    min-height: calc(100vh - 168px);
+    min-height: calc(100vh - 208px);
     background-color:rgb(176, 171, 214);
     text-align: center;
     padding-top:40px;
 }
 
+#food-page{
+    min-height: calc(100vh - 168px);
+}
 
+#film-page{
+    min-height: calc(100vh - 168px);
+}
 /*
 
 .animation{
