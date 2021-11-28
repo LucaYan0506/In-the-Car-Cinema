@@ -183,16 +183,32 @@ function submit_check(form,m){
 }
 
 
-function check_password(){
+function check_re_password(method){
     var password = document.getElementById("password");
     var re_password = document.getElementById("re-passoword");
-    var message = document.getElementById("message");
+    var message = document.getElementById("message2");
 
     if (password.value != re_password.value)
         message.innerHTML = "not matching"
     else
         message.innerHTML = "";
 
-    if (message.innerHTML == "not matching")
+    if (message.innerHTML == "not matching" & method == "Form"){
+        alert("Pls, type the password correctly")
         return false;
+    }
+}
+
+function check_password(){
+    var password = document.getElementById("password");
+    var message = document.getElementById("message1");
+
+    if (password.value.length < 8)
+        message.innerHTML = "password must be at least 8 characters"
+    else if (!/[A-Z]/.test(password.value))
+        message.innerHTML = "password must have at least a uppercase letter"
+    else if (!/[1-9]/.test(password.value))
+        message.innerHTML = "password must have at least a number"
+    else 
+        message.innerHTML = ""
 }

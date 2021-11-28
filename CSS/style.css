@@ -218,7 +218,12 @@ button {
 }
 
 #food-page{
+    margin-top:40px;
     min-height: calc(100vh - 168px);
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: 60px 300px 300px;
+    text-align: center;
 }
 
 #film-page{
