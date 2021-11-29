@@ -221,7 +221,7 @@ button {
     margin-top:40px;
     min-height: calc(100vh - 168px);
     display: grid;
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: 40% 60% ;
     grid-template-rows: 60px 380px 400px;
     text-align: center;
     background-image:url("../Image&assets/Background/Food_background\(color\).jpg");
