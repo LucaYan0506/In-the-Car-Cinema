@@ -225,6 +225,7 @@ button {
     grid-template-rows: 60px 380px 400px;
     text-align: center;
     background-image:url("../Image&assets/Background/Food_background\(color\).jpg");
+    color:whitesmoke;
 }
 
 #film-page{
