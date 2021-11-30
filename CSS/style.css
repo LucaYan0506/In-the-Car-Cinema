@@ -230,6 +230,20 @@ button {
 #film-page{
     min-height: calc(100vh - 168px);
 }
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 25%;
+  }
+  
+  th, td {
+    padding: 15px;
+  }
 /*
 
 .animation{
