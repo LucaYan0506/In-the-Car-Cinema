@@ -229,6 +229,8 @@ button {
 
 #film-page{
     min-height: calc(100vh - 168px);
+    background-image:url(../film_background2.jpg);
+    color:whitesmoke;
 }
 table, td, th {  
     border: 1px solid #ddd;
