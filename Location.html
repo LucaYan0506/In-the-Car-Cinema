@@ -9,10 +9,12 @@
 </head>
 <body>
     <input type="hidden" id="prev-link" name="location-link">
+    <div class="animation active"></div>
+
     <nav class="nav-bar">
         <img src="Image&assets/logo.png" alt="Logo" width="100px">
         <h1 style="margin-left:10px;margin-right: auto;color:rgb(255,0, 80);font-size:32px;" >In the Car Cinema</h1>
-        <a id="welcome-link" class="nav-link" href="index.html" >Home</a>
+        <a id="welcome-link" class="nav-link"onclick="loads_animation('index.html')" >Home</a>
         <div class="open-menu"><a id="location-link" class="nav-link" href="index.html#location">Location</a>
             <div class="sub-menu1">
                 <a id="location1-link" class="nav-link" style="padding-left: 7px;margin-left: 7px;padding-right: 7px;margin-right: 24px;" href="#">Location 1</a><br><hr>
@@ -20,20 +22,22 @@
                 <a id="location3-link" class="nav-link" style="padding-left: 7px;margin-left: 7px;padding-right: 7px;margin-right: 24px;" href="#">Location 3</a><br>
             </div>
         </div>
-        <a id="film-link" class="nav-link" href="index.html#film">Film</a>
-        <a id="food-link" class="nav-link" href="index.html#food">Food</a>
-        <a id="feedback-link" class="nav-link" href="index.html#feedback">Feedback</a>
-        <a id="footer-link" class="nav-link" href="index.html#footer">Contact us</a>
-        <a id="login-link" class="nav-link" href="login.html">Login</a> 
-        <a id="add-info-link" class="nav-link" href="Additional_Info.html">Additional Info</a>     
+        <a id="film-link" class="nav-link" onclick="loads_animation('index.html#film')">Film</a>
+        <a id="food-link" class="nav-link" onclick="loads_animation('index.html#food')">Food</a>
+        <a id="feedback-link" class="nav-link" onclick="loads_animation('index.html#feedback')">Feedback</a>
+        <a id="footer-link" class="nav-link" onclick="loads_animation('index.html#footer')">Contact us</a>
+        <a id="login-link" class="nav-link" onclick="loads_animation('Login.html')">Login</a> 
+        <a id="add-info-link" class="nav-link" onclick="loads_animation('Additional_Info.html')">Additional Info</a>     
     </nav>
 
-    <div class="container" id="body" style="height:1000px;background-color:rgb(176, 171, 214);">
+    <div class="container" id="login-page">
+
+        c
 
     </div>
 
-
-        <div class="container" id="footer">
+ 
+      <div class="container" id="footer">
         <div id="margin-left"></div>
     
         <div style="width: auto;"  id="item1">
@@ -49,20 +53,19 @@
         <div id="margin-left" style="grid-row:2/4"></div>
     
         <div id="item4">
-            <img scr="#" alt="icon" /> 
+            <img src="Image&assets/Footer/email_icon.jpg" id="icon" alt="icon" /> 
             <label style="font-weight:bold;font-size:20px;" for="email">help@inthecar.com</label> 
-    
             <br>
             <br>
     
-            <img scr="#" alt="phone" /> 
+            <img src="Image&assets/Footer/phone_icon.jpg" id="icon" alt="phone" /> 
             <label style="font-weight:bold;font-size:20px;" for="phone">+44 124 4312 3551</label> 
         </div>
     
         <div id="item5">
             <div>
-                <form action="#footer" onsubmit="return message(this)">
-                    <input style="width:192px" type="email">
+                <form action="#footer" onsubmit="return message(this,'Success! You are now subscribed')">
+                    <input style="width:192px" type="email" required>
                     <br>
                     <br>
                     <input style="width:200px;height:30px;font-weight: bold;" type="submit" value="Submit">
@@ -71,13 +74,13 @@
         </div>
     
         <div>
-            <img scr="#" alt="facebook">
-            <img scr="#" alt="instagram">
-            <img scr="#" alt="telegram">
-            <img scr="#" alt="Youtube">
-            <br>
-            <img scr="#" alt="Linkedin">
-            <img scr="#" alt="Twitter">
+            <a href="https://www.facebook.com/Meta/" target=”_blank”><img src="Image&assets/Footer/facebook_icon.jpg" id="icon" alt="facebook" style="margin-left: 10px;"></a>
+            <a href="https://www.instagram.com/instagram/" target=”_blank”><img src="Image&assets/Footer/instagram_icon.jpg" id="icon" alt="instagram" style="margin-left: 10px;"></a>
+            <a href="https://telegram.org/" target=”_blank”><img src="Image&assets/Footer/telegram_icon.jpg" id="icon" alt="telegram" style="margin-left: 10px;"></a>
+            <a href="https://www.youtube.com/" target=”_blank”><img src="Image&assets/Footer/youtube_icon.png" id="icon" alt="Youtube" style="margin-left: 10px;"></a>
+            <br><br>
+            <a href="https://www.linkedin.com/in/zhongyi-yan/" target=”_blank”><img src="Image&assets/Footer/linkedin_icon.jpg" id="icon" alt="Linkedin" style="margin-left: 10px;"></a>
+            <a href="https://twitter.com/twitter" target=”_blank”><img src="Image&assets/Footer/twitter_icon.png" id="icon" alt="Twitter" style="margin-left: 10px;"></a>
         </div>
      
         <div style="color:#1d1d1d;">bot-border</div>
