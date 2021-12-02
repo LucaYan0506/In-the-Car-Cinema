@@ -8,6 +8,7 @@ for (var i = 0; i < elements.length; i++){
 
 //update the position of ls
 function update(){
+    console.log("check")
     //set the height of all section of index page
     var h = 0;
     for (var i = 1; i < ls.length; i++){
@@ -20,6 +21,7 @@ function update(){
 window.addEventListener("resize", update);
 
 //use update() function when the user launch the browser
+window.addEventListener("load",update);
 update();
 
 //change the color of nav-link when the page is scrolled
