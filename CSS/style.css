@@ -317,31 +317,32 @@ table, td, th {
     padding-top:50px;
 }
 
-#locations{
+.locations{
     margin-left:5vw;
     padding-bottom:70px;
     font-size:22px;
     text-align: justify;
+    pointer-events: none;
 }
 
-#locations img{
+.locations img{
     height:300px;
     margin-right:0.5vw;
     margin-bottom: 2px;
 }
 
-#locations #maps{
+.locations #maps{
     float: left;
     margin-right: 20px;
 }
 
-#locations #txt{
+.locations #txt{
     height:300px;
     padding-right: 200px;
     position:relative;
 }
 
-#locations #txt button{
+.locations #txt button{
     position: absolute;
     bottom: 0px;
     left:510px;
@@ -356,12 +357,12 @@ table, td, th {
 }
 
 
-#locations #txt button:hover{
+.locations #txt button:hover{
     background-color: #5a6268;
     border-color: #545b62;
 }
 @media only screen and (max-width: 1736px) {
-    #locations #txt button{
+    .locations #txt button{
         width: calc(100% - 200px);
         left:0px;
     }
