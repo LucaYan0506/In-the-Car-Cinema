@@ -247,7 +247,7 @@ table, td, th {
 
   #film-page{
     min-height: calc(100vh - 168px);
-    background-image:url("Image&assets/Background/film_background2.jpg");
+    background-image:url("../Image&assets/Background/film_background2.jpg");
     color:whitesmoke;
 }
 
