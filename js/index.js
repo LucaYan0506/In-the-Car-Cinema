@@ -8,7 +8,6 @@
 
     //update the position of ls
     function update(){
-        console.log("check")
         //set the height of all section of index page
         var h = 0;
         for (var i = 1; i < ls.length; i++){
@@ -57,8 +56,6 @@
             left: 0,
             behavior: 'smooth'
         });
-
-        console.log(h);
     }
 
 
@@ -199,6 +196,10 @@
             alert("Pls, type the password correctly")
             return false;
         }
+        if (!check_password() & method == "Form"){
+            alert("Pls, type the password correctly")
+            return false;
+        }
     }
 
     function check_password(){
@@ -213,4 +214,9 @@
             message.innerHTML = "password must have at least a number"
         else
             message.innerHTML = ""
+
+        if (message.innerHTML == "")
+            return true
+        else 
+            return false
     }

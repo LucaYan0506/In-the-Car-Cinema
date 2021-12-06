@@ -321,7 +321,6 @@ table, td, th {
     padding-top:70px;
     font-size:22px;
     text-align: justify;
-    pointer-events: none;
 }
 
 .locations img{
@@ -339,6 +338,7 @@ table, td, th {
     height:300px;
     padding-right: 200px;
     position:relative;
+    pointer-events: none;
 }
 
 .locations #txt button{
