@@ -314,12 +314,11 @@ table, td, th {
     min-height:2300px;
     color:whitesmoke;
     background-color:#0a2536;
-    padding-top:50px;
 }
 
 .locations{
     margin-left:5vw;
-    padding-bottom:70px;
+    padding-top:70px;
     font-size:22px;
     text-align: justify;
     pointer-events: none;
