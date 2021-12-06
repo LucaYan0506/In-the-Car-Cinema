@@ -346,13 +346,13 @@ table, td, th {
     bottom: 0px;
     left:510px;
     width: calc(100% - 710px);
-    font-size: 20px;
     color: #fff;
     background-color: #6c757d;
     border-color: #6c757d;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     font-size: 1.25rem;
     line-height: 1.5;
+    pointer-events: all;
 }
 
 
