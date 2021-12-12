@@ -394,7 +394,7 @@ table, td, th {
     }
     
     #food-page div{
-        margin-left: 100%!important;
+        margin-left: 80%!important;
     }
     #food-page #center{
         grid-column: unset;
